@@ -1,5 +1,5 @@
 package com.bookstore.model;
 
-public class Genre {
-
+public enum Genre {
+    DRAMA,WAR
 }

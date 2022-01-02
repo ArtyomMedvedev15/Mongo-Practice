@@ -9,6 +9,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 import java.util.List;
 
@@ -30,6 +31,27 @@ public class Book {
     private List<String> countrysBook;
     private Genre genreBook;
     private Typograph typographBook;
-    private ZonedDateTime createBook;
+    private LocalDateTime createBook;
 
+    public Book(
+        String nameBook,
+        String authorBook,
+        Boolean existBook,
+        Integer countBook,
+        BigDecimal priceBook,
+        List<String> countrysBook,
+        Genre genreBook,
+        Typograph typographBook,
+        LocalDateTime createBook
+    ) {
+        this.nameBook = nameBook;
+        this.authorBook = authorBook;
+        this.existBook = existBook;
+        this.countBook = countBook;
+        this.priceBook = priceBook;
+        this.countrysBook = countrysBook;
+        this.genreBook = genreBook;
+        this.typographBook = typographBook;
+        this.createBook = createBook;
+    }
 }
