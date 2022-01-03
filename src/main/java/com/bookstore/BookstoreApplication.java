@@ -19,29 +19,4 @@ public class BookstoreApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BookstoreApplication.class, args);
 	}
-
-	@Bean
-	CommandLineRunner runner(BookRepository bookRepository){
-
-		return args -> {Typograph typographBook = new Typograph(
-			"Local typo",
-			"BY",
-			1432
-		);
-
-		Book book = new Book(
-			"War never changed",
-			"Remark",
-			true,
-			4512,
-			BigDecimal.valueOf(312),
-			List.of("RU,BY"),
-			Genre.DRAMA,
-			typographBook,
-			LocalDateTime.now()
-		);
-
-			bookRepository.insert(book);
-		};
-	}
 }

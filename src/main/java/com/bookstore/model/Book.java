@@ -56,4 +56,7 @@ public class Book {
         this.typographBook = typographBook;
         this.createBook = createBook;
     }
+
+    public Book() {
+    }
 }
